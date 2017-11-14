@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ListProcessing.Core
+﻿namespace ListProcessing.Core
 {
+    using System;
+    using System.Collections.Generic;
+
     public class Engine
     {
         public void Run()

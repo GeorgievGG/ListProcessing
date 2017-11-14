@@ -1,35 +1,17 @@
-﻿using ListProcessing.Contracts;
-using System;
-
-namespace ListProcessing.IO.Commands
+﻿namespace ListProcessing.IO.Commands
 {
+    using ListProcessing.Contracts;
+    using ListProcessing.Core;
+
     public abstract class Command : ICommand
     {
-        private string[] data;
+        private readonly ListProcessingManager manager;
 
-        protected Command(string[] data)
+        protected Command(ListProcessingManager manager)
         {
-            this.Data = data;
+            this.manager = manager;
         }
-
-        public string[] Data
-        {
-            get
-            {
-                return this.data;
-            }
-
-            protected set
-            {
-                if (value == null || value.Length == 0)
-                {
-                    throw new NullReferenceException();
-                }
-
-                this.data = value;
-            }
-        }
-
+        
         public abstract string Execute();
     }
 }

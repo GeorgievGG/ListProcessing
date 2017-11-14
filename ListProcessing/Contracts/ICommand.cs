@@ -2,10 +2,6 @@
 {
     public interface ICommand
     {
-        //string[] Data { get; set; }
-
-        string Execute();
-
-        
+        string Execute();        
     }
 }
