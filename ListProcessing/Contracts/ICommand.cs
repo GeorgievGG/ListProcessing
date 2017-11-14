@@ -2,7 +2,7 @@
 {
     public interface ICommand
     {
-        //Include Manager
+        string[] Data { get; set; }
 
         string Execute();
 
