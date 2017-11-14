@@ -18,11 +18,38 @@
             Initializer();
         }
 
-        ICommand Create(string command)
+        public ICommand Create(string command, Dictionary<string, string> parameters)
         {
+            Type commandType = commandTypes[command];
+            ConstructorInfo ctor = commandType.GetConstructors().FirstOrDefault();
+            ParameterInfo[] ctorParameters = ctor.GetParameters();
 
+            List<object> ctorParamValues = new List<object>();
 
-            return null;
+            foreach (ParameterInfo parameter in ctorParameters)
+            {
+                string name = parameter.Name;
+                Type type = parameter.ParameterType;
+
+                if (type.IsPrimitive || type == typeof(string))
+                {
+                    if (parameters.ContainsKey(name))
+                    {
+                        ctorParamValues.Add(Convert.ChangeType(parameters[name], type));
+                    }
+                }
+                else
+                {
+                    if (type.IsInterface)
+                    {
+
+                    }
+
+                    ctorParamValues.Add(Activator.CreateInstance(type));
+                }
+            }
+
+            return (ICommand)ctor.Invoke(ctorParamValues.ToArray());
         }
 
         private static void Initializer()

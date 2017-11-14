@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\ICommand.cs" />
+    <Compile Include="Contracts\IListProcessingManager.cs" />
     <Compile Include="Core\CommandFactory.cs" />
     <Compile Include="Core\Engine.cs" />
+    <Compile Include="IO\Commands\AppendCommand.cs" />
     <Compile Include="IO\Commands\Command.cs" />
     <Compile Include="Infrastructure\Constants\CommandConstants.cs" />
     <Compile Include="StartUp.cs" />
