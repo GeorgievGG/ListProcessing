@@ -40,9 +40,18 @@
                 }
                 else
                 {
+                    Type interfaceType = null;
+
                     if (type.IsInterface)
                     {
+                        interfaceType = type;
 
+                        type = Assembly.GetExecutingAssembly().GetTypes().Where(t => type.IsAssignableFrom(t) && !t.IsInterface).FirstOrDefault();
+                    }
+
+                    if (type == null)
+                    {
+                        throw new InvalidOperationException($"Please provide implementation for interface {interfaceType.Name}");
                     }
 
                     ctorParamValues.Add(Activator.CreateInstance(type));

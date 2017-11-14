@@ -7,11 +7,9 @@
     {
         private readonly int index;
         private readonly string inputString;
-        private readonly IListProcessingManager manager;
 
-        public AppendCommand(IListProcessingManager manager, int index, string inputString)
+        public AppendCommand(int index, string inputString)
         {
-            this.manager = manager;
             this.index = index;
             this.inputString = inputString;
         }
