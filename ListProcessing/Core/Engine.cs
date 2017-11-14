@@ -7,7 +7,7 @@
 
         public void Run()
         {
-
+            var factory = new CommandFactory();
         }
     }
 }

@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\ICommand.cs" />
+    <Compile Include="Core\CommandFactory.cs" />
     <Compile Include="Core\Engine.cs" />
+    <Compile Include="Infrastructure\Constants\CommandConstants.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
