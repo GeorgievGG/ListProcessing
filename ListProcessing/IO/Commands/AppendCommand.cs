@@ -8,9 +8,9 @@
         private readonly int inputIndex;
         private readonly string inputString;
 
-        public AppendCommand(ListProcessingManager manager, int index, string inputString) : base(manager)
+        public AppendCommand(ListProcessingManager manager, int inputIndex, string inputString) : base(manager)
         {
-            this.inputIndex = index;
+            this.inputIndex = inputIndex;
             this.inputString = inputString;
         }
 

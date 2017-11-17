@@ -9,7 +9,7 @@
         {
             //Test - to be removed later
             Console.WriteLine(new CommandFactory()
-                .Create("append", new Dictionary<string, string>(){ {"index", "2" }, {"inputString", "test" } })
+                .Create("append", new Dictionary<string, string>(){ { "inputIndex", "2" }, {"inputString", "test" } })
                 .Execute());
         }
     }
