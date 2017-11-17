@@ -13,6 +13,6 @@
             return string.Join(" ", list);
         }
 
-        //TO DO all commands...
+        //TO DO: all commands as instance methods...
     }
 }

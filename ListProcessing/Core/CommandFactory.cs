@@ -18,6 +18,12 @@
             Initializer();
         }
 
+        /// <summary>
+        /// Creates an instance of a class implementing ICommand interface
+        /// </summary>
+        /// <param name="command">Name of the command w/o suffix 'Command'</param>
+        /// <param name="parameters">Dictionary with all input parameters of primitive type with their values (key=paramName, value=paramValue)</param>
+        /// <returns></returns>
         public ICommand Create(string command, Dictionary<string, string> parameters)
         {
             Type commandType = commandTypes[command];
