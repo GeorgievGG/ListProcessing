@@ -5,18 +5,18 @@
     //Test - to be updated
     public class AppendCommand : Command
     {
-        private readonly int index;
+        private readonly int inputIndex;
         private readonly string inputString;
 
         public AppendCommand(ListProcessingManager manager, int index, string inputString) : base(manager)
         {
-            this.index = index;
+            this.inputIndex = index;
             this.inputString = inputString;
         }
 
         public override string Execute()
         {
-            return this.index + " " + this.inputString;
+            return this.inputIndex + " " + this.inputString;
         }
     }
 }
