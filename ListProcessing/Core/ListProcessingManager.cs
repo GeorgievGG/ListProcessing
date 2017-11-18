@@ -50,11 +50,6 @@
 
         }
 
-        public string End()
-        {
-            return "Finished";
-        }
-
         public string Insert(int index, string stringToInsert)
         {
             if (list.ElementAtOrDefault(index) != null)

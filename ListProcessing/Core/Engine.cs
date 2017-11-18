@@ -22,6 +22,7 @@
                     Console.WriteLine(e.Message);
                 }
             }
+            Console.WriteLine("Finished");
         }
     }
 }
