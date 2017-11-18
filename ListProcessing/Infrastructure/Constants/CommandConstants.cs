@@ -5,7 +5,12 @@
     public static class CommandConstants
     {
         public const string StringParameterName = "inputString";
+
         public const string IndexParameterName = "indexString";
+
+        public const string ProgramTerminatingCommand = "end";
+
+        public const string ProgramTerminationConfirmation = "Finished";
 
         /// <summary>
         /// This dictionary contains all commands and their input parameters
@@ -20,8 +25,7 @@
             { "rollLeft", new List<string> { } },
             { "rollRight", new List<string>{ } },
             { "sort", new List<string>{ } },
-            { "count", new List<string>{ StringParameterName } },
-            { "end", new List<string>{ } }
+            { "count", new List<string>{ StringParameterName } }
         };
 
         public const string CommandSuffix = "Command";

@@ -57,7 +57,8 @@
 
                     if (type == null)
                     {
-                        throw new InvalidOperationException($"Please provide implementation for interface {interfaceType.Name}");
+                        throw new InvalidOperationException(
+                            string.Format(ErrorConstants.MissingImplementation, interfaceType.Name));
                     }
 
                     ctorParamValues.Add(Activator.CreateInstance(type));

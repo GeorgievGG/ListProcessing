@@ -1,5 +1,6 @@
 ﻿namespace ListProcessing.Core
 {
+    using ListProcessing.Infrastructure.Constants;
     using System;
     using System.Linq;
 
@@ -10,7 +11,7 @@
             var input = string.Empty;
             var initialValues = Console.ReadLine().Split().ToList();
             ListProcessingManager.Initialize(initialValues);
-            while ((input = Console.ReadLine()) != "end")
+            while ((input = Console.ReadLine()) != CommandConstants.ProgramTerminatingCommand)
             {
                 try
                 {
@@ -22,7 +23,7 @@
                     Console.WriteLine(e.Message);
                 }
             }
-            Console.WriteLine("Finished");
+            Console.WriteLine(CommandConstants.ProgramTerminationConfirmation);
         }
     }
 }
