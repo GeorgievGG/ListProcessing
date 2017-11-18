@@ -11,7 +11,9 @@
         {
             this.manager = manager;
         }
-        
+
+        protected ListProcessingManager Manager => manager;
+
         public abstract string Execute();
     }
 }

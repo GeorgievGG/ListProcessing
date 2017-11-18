@@ -14,8 +14,6 @@
             return string.Join(" ", list);
         }
 
-        //TO DO: all commands as instance methods...
-
         public string Append(string stringToAppend)
         {
             list.Add(stringToAppend);
