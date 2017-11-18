@@ -7,9 +7,22 @@
     {
         public void Run()
         {
-            //Test - to be removed later
+            var input = string.Empty;
+            while ((input = Console.ReadLine()) != "end")
+            {
+                try
+                {
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
             Console.WriteLine(new CommandFactory()
-                .Create("append", new Dictionary<string, string>(){ { "inputIndex", "2" }, {"inputString", "test" } })
+                .Create("append", new Dictionary<string, string>() { { "inputIndex", "2" }, { "inputString", "test" } })
                 .Execute());
         }
     }
