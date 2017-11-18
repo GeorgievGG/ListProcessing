@@ -39,6 +39,7 @@
         {
             if (list.ElementAtOrDefault(index) != null)
             {
+            return string.Join(" ",list);
                 list.RemoveAt(index);
                 return string.Join(" ", list);
             }
@@ -47,6 +48,7 @@
                 return $"Error: invalid index {index}";
             }
           
+
         }
 
         public string End()
