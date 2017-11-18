@@ -37,8 +37,16 @@
 
         public string Delete(int index)
         {
-            list.RemoveAt(index);
-            return string.Join(" ",list);
+            if (list.ElementAtOrDefault(index) != null)
+            {
+                list.RemoveAt(index);
+                return string.Join(" ", list);
+            }
+            else
+            {
+                return $"Error: invalid index {index}";
+            }
+          
         }
 
         public string End()
@@ -48,8 +56,16 @@
 
         public string Insert(int index, string stringToInsert)
         {
-            list.Insert(index, stringToInsert);
-            return string.Join(" ", list);
+            if (list.ElementAtOrDefault(index) != null)
+            {
+                list.Insert(index, stringToInsert);
+                return string.Join(" ", list);
+            }
+            else
+            {
+                return $"Error: invalid index {index}";
+            }
+           
         }
 
         public string Prepend(string stringToPrepend)
