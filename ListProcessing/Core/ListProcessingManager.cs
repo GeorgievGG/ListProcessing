@@ -50,6 +50,11 @@
           
         }
 
+        public string End()
+        {
+            return CommandConstants.ProgramTerminationConfirmation;
+        }
+
         public string Insert(int index, string stringToInsert)
         {
             if (list.ElementAtOrDefault(index) != null)

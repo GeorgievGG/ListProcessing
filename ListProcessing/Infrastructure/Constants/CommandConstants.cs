@@ -24,6 +24,7 @@
             { "reverse", new List<string>{ } },
             { "insert", new List<string> { IndexParameterName, StringParameterName } },
             { "delete", new List<string> { IndexParameterName } },
+            { "end", new List<string>{ } },
             { "roll", new List<string> { DirectionParameterName } },
             { "sort", new List<string>{ } },
             { "count", new List<string>{ StringParameterName } }

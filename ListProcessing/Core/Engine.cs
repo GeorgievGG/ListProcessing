@@ -25,14 +25,21 @@
                 {
                     IList<string> inputParams = input.Split().ToList();
 
-                    Console.WriteLine(commandInterpreter.Process(inputParams));
+                    string result = commandInterpreter.Process(inputParams);
+
+                    Console.WriteLine(result);
+
+                    if (result == CommandConstants.ProgramTerminatingCommand)
+                    {
+                        break;
+                    }
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
+
             }
-            Console.WriteLine(CommandConstants.ProgramTerminationConfirmation);
         }
     }
 }

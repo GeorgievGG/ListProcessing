@@ -54,6 +54,7 @@
     <Compile Include="Infrastructure\Constants\CommandConstants.cs" />
     <Compile Include="IO\Commands\CountCommand.cs" />
     <Compile Include="IO\Commands\DeleteCommand.cs" />
+    <Compile Include="IO\Commands\EndCommand.cs" />
     <Compile Include="IO\Commands\InsertCommand.cs" />
     <Compile Include="IO\Commands\PrependCommand.cs" />
     <Compile Include="IO\Commands\ReverseCommand.cs" />
