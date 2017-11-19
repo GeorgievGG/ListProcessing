@@ -88,20 +88,34 @@
             return string.Join(" ", list);
         }
 
-        public string RollLeft()
+        public string Roll()
         {
-            string first = list[0];
-            list.RemoveAt(0);
-            list.Add(first);
-           return string.Join(" ", list);
+            string direction = list[0];
+
+            if (direction=="left")
+            {
+                list.RemoveAt(0);
+                string first = list[0];
+                list.RemoveAt(0);
+                list.Add(first);
+                return string.Join(" ", list);
+            }
+            else if (direction=="right")
+            {
+                list.RemoveAt(0);
+                string last = list.Last();
+                list.RemoveAt(list.Count - 1);
+                list.Insert(0, last);
+                return string.Join(" ", list);
+            }
+
+            else
+            {
+                return "Error: invalid command parameters";
+            }
+           
         }
 
-        public string RollRight()
-        {
-            string last = list.Last();
-            list.RemoveAt(list.Count - 1);
-            list.Insert(0, last);
-            return string.Join(" ", list);
-        }
+       
     }
 }
