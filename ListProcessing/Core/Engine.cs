@@ -19,8 +19,12 @@
 
             CommandInterpreter commandInterpreter = new CommandInterpreter(commandFactory);
 
-            while ((input = Console.ReadLine()) != CommandConstants.ProgramTerminatingCommand)
+            
+
+            while (true)
             {
+                input = Console.ReadLine();
+
                 try
                 {
                     IList<string> inputParams = input.Split().ToList();
@@ -29,7 +33,7 @@
 
                     Console.WriteLine(result);
 
-                    if (result == CommandConstants.ProgramTerminatingCommand)
+                    if (result == CommandConstants.ProgramTerminationConfirmation)
                     {
                         break;
                     }
@@ -38,7 +42,6 @@
                 {
                     Console.WriteLine(e.Message);
                 }
-
             }
         }
     }
