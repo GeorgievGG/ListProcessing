@@ -72,13 +72,13 @@
 
         public string Reverse()
         {
-            list.Reverse();
+            list = list.Reverse().ToList();
             return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
         public string Sort()
         {
-            list.OrderBy(w => w);
+            list = list.OrderBy(w => w).ToList();
             return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
