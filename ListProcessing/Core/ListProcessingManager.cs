@@ -15,8 +15,6 @@
             return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
-        //TO DO: all commands as instance methods...
-
         public string Append(string stringToAppend)
         {
             list.Add(stringToAppend);

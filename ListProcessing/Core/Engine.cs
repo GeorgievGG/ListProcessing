@@ -11,12 +11,14 @@
             var input = string.Empty;
             var initialValues = Console.ReadLine().Split().ToList();
             ListProcessingManager.Initialize(initialValues);
+            var commandFactory = new CommandFactory();
+            var commandInterpreter = new CommandInterpreter(commandFactory);
             while ((input = Console.ReadLine()) != CommandConstants.ProgramTerminatingCommand)
             {
                 try
                 {
-                    var inputParams = input.Split();
-                    //var commandInterpreter = new CommandInterpreter(new CommandFactory(), inputParams);
+                    var inputParams = input.Split().ToList();
+                    commandInterpreter.Process(inputParams);
                 }
                 catch (Exception e)
                 {
