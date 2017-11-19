@@ -41,7 +41,16 @@
                 {
                     if (parameters.ContainsKey(name))
                     {
-                        ctorParamValues.Add(Convert.ChangeType(parameters[name], type));
+                        try
+                        {
+                            ctorParamValues.Add(Convert.ChangeType(parameters[name], type));
+                        }
+                        catch (Exception)
+                        {
+
+                            throw new ArgumentException(ErrorConstants.InvalidCommandParameters);
+                        }
+                        
                     }
                 }
                 else
