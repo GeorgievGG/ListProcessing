@@ -6,7 +6,7 @@
     {
         public const string StringParameterName = "inputString";
 
-        public const string IndexParameterName = "indexString";
+        public const string IndexParameterName = "inputIndex";
 
         public const string DirectionParameterName = "direction";
 

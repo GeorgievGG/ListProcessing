@@ -101,7 +101,7 @@
 
             else
             {
-                return "Error: invalid command parameters";
+                return ErrorConstants.InvalidCommandParameters;
             }
            
         }      

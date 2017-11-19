@@ -2,23 +2,30 @@
 {
     using ListProcessing.Infrastructure.Constants;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     public class Engine
     {
         public void Run()
         {
-            var input = string.Empty;
-            var initialValues = Console.ReadLine().Split().ToList();
-            ListProcessingManager.Initialize(initialValues);
-            var commandFactory = new CommandFactory();
-            var commandInterpreter = new CommandInterpreter(commandFactory);
+            string input = string.Empty;
+
+            IList<string> initialValues = Console.ReadLine().Split().ToList();
+
+            Console.WriteLine(ListProcessingManager.Initialize(initialValues));
+
+            CommandFactory commandFactory = new CommandFactory();
+
+            CommandInterpreter commandInterpreter = new CommandInterpreter(commandFactory);
+
             while ((input = Console.ReadLine()) != CommandConstants.ProgramTerminatingCommand)
             {
                 try
                 {
-                    var inputParams = input.Split().ToList();
-                    commandInterpreter.Process(inputParams);
+                    IList<string> inputParams = input.Split().ToList();
+
+                    Console.WriteLine(commandInterpreter.Process(inputParams));
                 }
                 catch (Exception e)
                 {
