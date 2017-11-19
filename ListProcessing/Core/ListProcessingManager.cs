@@ -1,5 +1,6 @@
 ﻿namespace ListProcessing.Core
 {
+    using ListProcessing.Infrastructure.Constants;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -11,7 +12,7 @@
         {
             list = inputList;
 
-            return string.Join(" ", list);
+            return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
         //TO DO: all commands as instance methods...
@@ -19,7 +20,7 @@
         public string Append(string stringToAppend)
         {
             list.Add(stringToAppend);
-           return string.Join(" ", list);
+           return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
         public string Count(string searchWord)
@@ -42,11 +43,11 @@
             if (list.ElementAtOrDefault(index) != null)
             {
                 list.RemoveAt(index);
-                return string.Join(" ", list);
+                return string.Join(OutputConstants.OutputStringSeparator, list);
             }
             else
             {
-                return $"Error: invalid index {index}";
+                return string.Format(ErrorConstants.InvalidIndex, index);
             }
           
         }
@@ -61,11 +62,11 @@
             if (list.ElementAtOrDefault(index) != null)
             {
                 list.Insert(index, stringToInsert);
-                return string.Join(" ", list);
+                return string.Join(OutputConstants.OutputStringSeparator, list);
             }
             else
             {
-                return $"Error: invalid index {index}";
+                return string.Format(ErrorConstants.InvalidIndex, index);
             }
            
         }
@@ -73,19 +74,19 @@
         public string Prepend(string stringToPrepend)
         {
             list.Insert(0, stringToPrepend);
-           return string.Join(" ", list);
+           return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
         public string Reverse()
         {
             list.Reverse();
-            return string.Join(" ", list);
+            return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
         public string Sort()
         {
             list.OrderBy(w => w);
-            return string.Join(" ", list);
+            return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
         public string Roll()
@@ -98,7 +99,7 @@
                 string first = list[0];
                 list.RemoveAt(0);
                 list.Add(first);
-                return string.Join(" ", list);
+                return string.Join(OutputConstants.OutputStringSeparator, list);
             }
             else if (direction=="right")
             {
@@ -106,7 +107,7 @@
                 string last = list.Last();
                 list.RemoveAt(list.Count - 1);
                 list.Insert(0, last);
-                return string.Join(" ", list);
+                return string.Join(OutputConstants.OutputStringSeparator, list);
             }
 
             else
