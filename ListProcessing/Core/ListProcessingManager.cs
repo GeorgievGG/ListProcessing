@@ -15,8 +15,6 @@
             return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
-        //TO DO: all commands as instance methods...
-
         public string Append(string stringToAppend)
         {
             list.Add(stringToAppend);
@@ -88,7 +86,6 @@
         {
             if (direction=="left")
             {
-                list.RemoveAt(0);
                 string first = list[0];
                 list.RemoveAt(0);
                 list.Add(first);
@@ -96,7 +93,6 @@
             }
             else if (direction=="right")
             {
-                list.RemoveAt(0);
                 string last = list.Last();
                 list.RemoveAt(list.Count - 1);
                 list.Insert(0, last);
