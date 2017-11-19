@@ -22,8 +22,7 @@
             { "peverse", new List<string>{ } },
             { "insert", new List<string> { IndexParameterName, StringParameterName } },
             { "delete", new List<string> { IndexParameterName } },
-            { "rollLeft", new List<string> { } },
-            { "rollRight", new List<string>{ } },
+            { "roll", new List<string> { } },
             { "sort", new List<string>{ } },
             { "count", new List<string>{ StringParameterName } }
         };
