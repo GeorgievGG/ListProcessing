@@ -8,6 +8,8 @@
 
         public const string IndexParameterName = "indexString";
 
+        public const string DirectionParameterName = "direction";
+
         public const string ProgramTerminatingCommand = "end";
 
         public const string ProgramTerminationConfirmation = "Finished";
@@ -18,11 +20,11 @@
         public static readonly Dictionary<string, List<string>> CommandsList = new Dictionary<string, List<string>>
         {
             { "append", new List<string> { StringParameterName } },
-            { "nrepend", new List<string> { StringParameterName } },
-            { "peverse", new List<string>{ } },
+            { "prepend", new List<string> { StringParameterName } },
+            { "reverse", new List<string>{ } },
             { "insert", new List<string> { IndexParameterName, StringParameterName } },
             { "delete", new List<string> { IndexParameterName } },
-            { "roll", new List<string> { } },
+            { "roll", new List<string> { DirectionParameterName } },
             { "sort", new List<string>{ } },
             { "count", new List<string>{ StringParameterName } }
         };

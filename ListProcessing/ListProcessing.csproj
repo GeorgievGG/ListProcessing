@@ -55,9 +55,8 @@
     <Compile Include="IO\Commands\CountCommand.cs" />
     <Compile Include="IO\Commands\DeleteCommand.cs" />
     <Compile Include="IO\Commands\PrependCommand.cs" />
-    <Compile Include="IO\Commands\Reverse.cs" />
-    <Compile Include="IO\Commands\RollLeftCommand.cs" />
-    <Compile Include="IO\Commands\RollRight.cs" />
+    <Compile Include="IO\Commands\ReverseCommand.cs" />
+    <Compile Include="IO\Commands\RollCommand.cs" />
     <Compile Include="IO\Commands\SortCommand.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

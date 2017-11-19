@@ -52,11 +52,6 @@
           
         }
 
-        public string End()
-        {
-            return "Finished";
-        }
-
         public string Insert(int index, string stringToInsert)
         {
             if (list.ElementAtOrDefault(index) != null)
@@ -89,10 +84,8 @@
             return string.Join(OutputConstants.OutputStringSeparator, list);
         }
 
-        public string Roll()
+        public string Roll(string direction)
         {
-            string direction = list[0];
-
             if (direction=="left")
             {
                 list.RemoveAt(0);
@@ -115,8 +108,6 @@
                 return "Error: invalid command parameters";
             }
            
-        }
-
-       
+        }      
     }
 }
